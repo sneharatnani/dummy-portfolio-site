@@ -1,0 +1,100 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* nav menu */
+
+header {
+    background: black;
+    position: fixed;
+    height: 9vh;
+}
+
+#navbar {
+    width: 100vw;
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 10px;
+    font-size: 2.5rem;
+    font-family: 'Zen Antique', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-link a {
+    color: white;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.nav-link li:last-child {
+    padding-right: 10px;
+}
+
+/* welcome */
+
+#welcome-section {
+    height: 100vh;
+    background-image: url(../img/adrian-infernus-GLf7bAwCdYg-unsplash.jpg);
+    background-size: cover;
+}
+
+.welcome-content {
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-content h1 {
+    /* font-family: 'Raleway', sans-serif;  */
+    font-family: 'Zen Antique', sans-serif;
+    font-size: 9vw;
+    text-transform: capitalize;
+}
+
+/* media queries */
+
+@media screen and (max-width: 500px) {
+    /* nav menu */
+    header {
+        height: 14vh;
+    }
+
+    #navbar {
+        flex-direction: column;
+    }
+    .logo {
+        padding-left: 0;
+        align-items: center;
+    }
+    .nav-link {
+        align-items: center;
+    }
+    .nav-link li:last-child {
+        padding-right: 0;
+    }
+}
