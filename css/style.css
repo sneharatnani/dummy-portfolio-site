@@ -7,6 +7,11 @@ a {
     text-decoration: none;
 }
 
+h1, h2, h3 {
+    font-family: 'Zen Antique', sans-serif;
+    text-transform: capitalize;
+}
+
 /* nav menu */
 
 header {
@@ -49,15 +54,14 @@ header {
 }
 
 .nav-link li:last-child {
-    padding-right: 10px;
+    padding-right: 25px;
 }
 
 /* welcome */
 
 #welcome-section {
     height: 100vh;
-    background-image: url(../img/adrian-infernus-GLf7bAwCdYg-unsplash.jpg);
-    background-size: cover;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
 
 .welcome-content {
@@ -74,7 +78,6 @@ header {
 .welcome-content h1 {
     margin: 0;
     font-weight: normal;
-    font-family: 'Zen Antique', sans-serif;
     font-size: 5rem;
 }
 
@@ -86,13 +89,56 @@ header {
 /* about */
 
 .about {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    padding: 2rem 0;
     text-align: center;
+    background: black;
+    color: white;
 }
 
 .about h2 {
+    font-style: italic;
+    margin-top: 0;
+    text-decoration: underline pink;
+}
+
+.about .about-img {
+    width: 12rem;
+    border-radius: 6rem;
+}
+
+.about p {
+    font-family: 'Roboto', sans-serif;
+    width: 60vw;
+    margin: auto;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+/* projects */
+
+#projects {
+    justify-items: center;
+    gap: 20px;
+    text-align: center;
+    padding: 2rem 6rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#projects h2 {
+    text-decoration: underline pink;
+    font-style: italic;
     grid-column: 1 / -1;
+}
+
+#projects button {
+    border: none;
+}
+
+#projects img {
+    height: 14rem;
+    display: block;
+    width: 21rem;
 }
 
 /* media queries */
@@ -121,5 +167,9 @@ header {
     }
     .welcome-content p {
         font-size: 1.4rem;
+    }
+    /* about */
+    .about p {
+        width: 90vw;
     }
 }
