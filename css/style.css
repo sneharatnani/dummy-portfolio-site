@@ -7,7 +7,8 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3 {
+h1, h2 {
+    font-weight: normal;
     font-family: 'Zen Antique', sans-serif;
     text-transform: capitalize;
 }
@@ -73,6 +74,7 @@ header {
     justify-content: center;
     align-items: center;
     text-transform: capitalize;
+    padding: 0 5px;
 }
 
 .welcome-content h1 {
@@ -117,33 +119,71 @@ header {
 /* projects */
 
 #projects {
+    background: pink;
     justify-items: center;
+    justify-content: center;
     gap: 20px;
     text-align: center;
     padding: 2rem 6rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 21rem);
+}
+
+#projects div {
+    box-sizing: border-box;
+    width: 21rem;
+    background: #ffffff52;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 #projects h2 {
-    text-decoration: underline pink;
+    padding: 0 5px;
+    text-decoration: underline;
     font-style: italic;
     grid-column: 1 / -1;
 }
 
+#projects h3 {
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+}
+
 #projects button {
     border: none;
+    font-size: 1rem;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f1bfca;
+    border-radius: 10px;
+}
+
+#projects button:hover {
+    background: #f1aebc;
+}
+
+#projects a {
+    font-family: serif;
+    color: black;
+    text-transform: capitalize;
 }
 
 #projects img {
-    height: 14rem;
+    height: 15rem;
     display: block;
-    width: 21rem;
+    width: 100%;
 }
 
 /* media queries */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
+    #projects {
+        grid-template-columns: 21rem 21rem;
+        padding: 2rem 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
     /* nav menu */
     header {
         height: 14vh;
@@ -171,5 +211,19 @@ header {
     /* about */
     .about p {
         width: 90vw;
+    }
+    /* projects */
+    #projects {
+        padding: 0;
+        grid-template-columns: 20rem;
+    }
+    #projects div {
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #projects div {
+        width: 15.5rem;
     }
 }
