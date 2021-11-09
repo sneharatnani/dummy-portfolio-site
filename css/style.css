@@ -176,6 +176,12 @@ header {
 
 /* media queries */
 
+@media screen and (max-width: 1024px) {
+    #projects {
+        grid-template-columns: 22rem 22rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
     #projects {
         grid-template-columns: 21rem 21rem;
