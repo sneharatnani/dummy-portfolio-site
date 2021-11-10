@@ -189,6 +189,10 @@ footer a {
     padding: 0 4px;
 }
 
+footer p {
+    font-weight: bold;
+}
+
 /* media queries */
 
 @media screen and (max-width: 1024px) {
