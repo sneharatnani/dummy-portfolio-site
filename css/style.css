@@ -16,7 +16,7 @@ h1, h2 {
 /* nav menu */
 
 header {
-    background: black;
+    background: white;
     position: fixed;
     height: 9vh;
 }
@@ -33,7 +33,7 @@ header {
     padding-left: 10px;
     font-size: 2.5rem;
     font-family: 'Zen Antique', sans-serif;
-    color: white;
+    color: black;
     display: flex;
     justify-content: flex-start;
 }
@@ -48,21 +48,25 @@ header {
 }
 
 .nav-link a {
-    color: white;
+    color: black;
     font-size: 1.1rem;
     text-transform: capitalize;
     font-weight: bold;
 }
 
+.nav-link a:hover, .nav-link a:active {
+    color: #e91e63;
+}
+
 .nav-link li:last-child {
-    padding-right: 25px;
+    margin-right: 20px;
 }
 
 /* welcome */
 
 #welcome-section {
     height: 100vh;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background: #e91e63;
 }
 
 .welcome-content {
@@ -93,14 +97,13 @@ header {
 .about {
     padding: 2rem 0;
     text-align: center;
-    background: black;
-    color: white;
 }
 
 .about h2 {
+    color: #e91e63;
     font-style: italic;
     margin-top: 0;
-    text-decoration: underline pink;
+    text-decoration: underline #e91e63;
 }
 
 .about .about-img {
@@ -119,7 +122,7 @@ header {
 /* projects */
 
 #projects {
-    background: pink;
+    background: #e91e63;
     justify-items: center;
     justify-content: center;
     gap: 20px;
@@ -132,14 +135,15 @@ header {
 #projects div {
     box-sizing: border-box;
     width: 21rem;
-    background: #ffffff52;
+    border: 2px solid white;
     padding: 15px;
     border-radius: 10px;
 }
 
 #projects h2 {
+    color: white;
     padding: 0 5px;
-    text-decoration: underline;
+    text-decoration: underline white;
     font-style: italic;
     grid-column: 1 / -1;
 }
@@ -154,7 +158,6 @@ header {
     font-size: 1rem;
     margin-top: 10px;
     padding: 10px;
-    background: #f1bfca;
     border-radius: 10px;
 }
 
@@ -172,6 +175,18 @@ header {
     height: 15rem;
     display: block;
     width: 100%;
+}
+
+/* contact */
+
+footer {
+    background: #ccc;
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+footer a {
+    padding: 0 4px;
 }
 
 /* media queries */
@@ -205,7 +220,7 @@ header {
         align-items: center;
     }
     .nav-link li:last-child {
-        padding-right: 0;
+        margin-right: 0;
     }
     /* welcome */
     .welcome-content h1 {
@@ -220,7 +235,7 @@ header {
     }
     /* projects */
     #projects {
-        padding: 0;
+        padding: 1rem 0;
         grid-template-columns: 20rem;
     }
     #projects div {
